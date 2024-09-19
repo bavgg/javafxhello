@@ -1,0 +1,7 @@
+.vscode/
+out/
+bin/
+
+*.jar
+*.class
+*.exe
