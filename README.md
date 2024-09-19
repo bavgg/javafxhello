@@ -1,18 +1,44 @@
-## Getting Started
+### Prerequisites
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+- Java SDK
+- JavaFX SDK
+- JavaFX JMODS
+- Java
 
-## Folder Structure
+### Installation
 
-The workspace contains two folders by default, where:
+1. **Clone the repository:**
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+   ```bash
+   git clone https://github.com/bavgg/javafxhello.git
+   ```
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+2. **Navigate to the project directory:**
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+   ```bash
+   cd javafxhello
+   ```
 
-## Dependency Management
+3. **Compile:**
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+   ```bash
+   javac --module-path %PATH_TO_FX_JAR% --add-modules javafx.controls,javafx.fxml -d out .\src\hellofx\*.java
+   ```
+
+4. **Create JAR file:**
+
+   ```bash
+   jar --create --file hellofx.jar --main-class=hellofx.Main -C out . -C src hellofx/hellofx.fxml
+   ```
+
+5. **Run the project:**
+
+   ```bash
+   java --module-path %PATH_TO_FX_JAR% --add-modules javafx.controls,javafx.fxml -jar .\hellofx.jar
+   ```
+
+
+## Contact
+
+- Email: gestopajonas@gmail.com
+- GitHub: [bavgg](https://github.com/bavgg)
